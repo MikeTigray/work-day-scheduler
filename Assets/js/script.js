@@ -41,7 +41,7 @@ for (i = 0; i < times.length; i++) {
 //When save buttons are clicked....
 $(".saveBtn").on("click", function () {
   var buttonId = $(this).attr("id");
-
+  // below if statements/conditions store the values entered by user to local storage
   if (buttonId == "btn-8") {
     localStorage.setItem("chores8", am8.val());
   } else if (buttonId == "btn-9") {
@@ -63,6 +63,4 @@ $(".saveBtn").on("click", function () {
   } else if (buttonId == "btn-17") {
     localStorage.setItem("chores17", pm5.val());
   } else return;
-
-  console.log(buttonId);
 });
