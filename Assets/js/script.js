@@ -1,4 +1,4 @@
-//Display current day using moment()
+//The below variable display current day using moment()
 var today = moment();
 $("#currentDay").text(today.format("MMM Do, YYYY"));
 //Declared variables for respective times' text areas
@@ -12,17 +12,7 @@ var pm2 = $("#2pm");
 var pm3 = $("#3pm");
 var pm4 = $("#4pm");
 var pm5 = $("#5pm");
-//declared variables for buttons
-var button8 = $("#btn-8");
-var button9 = $("#btn-9");
-var button10 = $("#btn-10");
-var button11 = $("#btn-11");
-var button12 = $("#btn-12");
-var button13 = $("#btn-13");
-var button14 = $("#btn-14");
-var button15 = $("#btn-15");
-var button16 = $("#btn-16");
-var button17 = $("#btn-17");
+
 // variables of chores retrieved from local storage/All chores are stored in different keys
 var retrieved8 = am8.text(localStorage.getItem("chores8"));
 var retrieved9 = am9.text(localStorage.getItem("chores9"));
@@ -38,7 +28,7 @@ var retrieved17 = pm5.text(localStorage.getItem("chores17"));
 // array for all time variables
 var times = [am8, am9, am10, am11, pm12, pm1, pm2, pm3, pm4, pm5];
 
-// a for loop to set past, present ,and future
+// a for loop to set past, present ,and future colors for time blocks
 for (i = 0; i < times.length; i++) {
   if (times[i].attr("data-time") < today.hour()) {
     times[i].addClass("past");
